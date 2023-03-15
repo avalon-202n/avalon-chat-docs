@@ -3,7 +3,7 @@
 ## API v1.0
 
 * [😀 User](README.md)
-* [🐶 Profile](api-v1.0/profile.md)
+* [🐶 Profile](v-1.0/profile.md)
 
 ## 🗒 회의록 <a href="#minute-book" id="minute-book"></a>
 
@@ -15,5 +15,5 @@
 
 ## 북마크 <a href="#bookmarks" id="bookmarks"></a>
 
-* [공통](bookmarks/undefined.md)
-* [Backend](bookmarks/backend.md)
+* [🤣 공통](bookmarks/common.md)
+* [🅱 Backend](bookmarks/backend.md)
