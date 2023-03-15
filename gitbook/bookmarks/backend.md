@@ -4,3 +4,4 @@
   * naver hackday convention - [https://github.com/naver/hackday-conventions-java](https://github.com/naver/hackday-conventions-java)
 * package structure reference - [https://cheese10yun.github.io/spring-guide-directory/#-7](https://cheese10yun.github.io/spring-guide-directory/#-7)
 * github action + gcp deploy reference - [https://cloud.google.com/community/tutorials/cicd-cloud-run-github-actions](https://cloud.google.com/community/tutorials/cicd-cloud-run-github-actions)
+* erd cloud - [https://www.erdcloud.com/d/9SgadsuqBYBJLb4tQ](https://www.erdcloud.com/d/9SgadsuqBYBJLb4tQ)
