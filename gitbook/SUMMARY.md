@@ -17,6 +17,7 @@
 * [4주차 230222(수)](meeting-notes/4-230222.md)
 * [5주차 230301(수)](meeting-notes/5-230301.md)
 * [8주차 230321(화)](meeting-notes/8-230321.md)
+* [10주차 230404(화)](meeting-notes/10-230404.md)
 * [23/03/20-sample-meeting-note](meeting-notes/23-03-20-sample-meeting-note.md)
 
 ## 북마크 <a href="#bookmarks" id="bookmarks"></a>
