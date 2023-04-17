@@ -27,7 +27,6 @@
 * [⛲ Frontend](bookmarks/frontend.md)
 * [🅱 Backend](bookmarks/backend.md)
 
+## Convention & Rules
 
-## Convention & Rules <a href="#convention-and-rules" id="convention-and-rules"></a>
-
-- [🅱 Backend](convention-and-rules/backend.md)
+* [🅱 Backend](convention-and-rules/backend.md)
