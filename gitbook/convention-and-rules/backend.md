@@ -101,10 +101,10 @@
 
 ### commons
 
-- `final` 키워드는 활용하지 않는다.
-- 애너테이션의 순서는 그 역할이 중요한 것이 아래로 가도록 한다. (가능하면?)
+- local variable 에서 `final` 키워드는 활용하지 않는다.
+- 애너테이션의 순서는 그 역할이 중요한 것이 아래로 가도록 한다.
 	- 롬복 애너테이션은 위로
-	- `@Entity`, `@RestController`, `@Service` 와 같이 클래스의 핵심적인 역할을 드러내는 애너테이션은 아래로
+	- `@Entity`, `@RestController`, `@Service` 와 같이 클래스의 핵심적인 역할을 드러내는 애너테이션은 아래로 등등
 
 #### comments
 
@@ -128,9 +128,164 @@ public abstract class BaseEntity {
 
 ### `domain.controller`
 
+- 컨트롤러에 로직을 두지 않는다. 서비스에 대한 위임 및 HTTP 요청에 대한 바인딩이 컨트롤러의 역할
+	- 따라서 대부분의 경우에 타겟 서비스 필드 하나만을 가진다. 이 경우 필드명은 `service` 로 한다.
+
+- class annotation - `lombok`/ `swagger`/ `spring` 
+- method annotation - `@Operation`/ `@XXXMapping` - 필수
+- swagger 애너테이션에 현재 완성되지 않은 클래스/메서드에 적절하게 [WIP] 를 추가해서 swagger-ui 에서 확인할 수 있도록 한다.
+
+- 요청
+	- 일반적인 json body 의 경우 `@RequestBody` 애너테이션과 함께 전용 dto 를 사용한다.
+	- 가능한 파라미터 종류는 다음과 같다.
+		- `@RequestBody XXXRequest request` - http request body (in json format)
+		- `@AuthenticationPrincipal SecurityUser securityUser` - 인증 요청의 `principal`
+		- `@PathVariable long friendProfileId` - path variable
+		- `@RequestParam String phoneNumber` - query parameter
+	- request body 의 경우 항상 전용 요청 DTO 클래스를 활용한다.
+
+- 응답
+	- `Http Response Header` 를 201, 204 등으로 커스텀하는 경우에는 `ResponseEntityUtil` 의 유틸리티 메서드를 활용한다.
+	- 그렇지 않다면 서비스의 응답을 바로 return 한다. (inline)
+	- 리스트 응답의 경우 바로 응답하지 않고 Map, 혹은 전용 클래스로 감싸서 응답한다.
+
+```java
+@Slf4j  
+@RequiredArgsConstructor  
+@Tag(name = "친구 API", description = "WIP")  
+@RequestMapping("/friends")  
+@RestController  
+public class FriendController {  
+   private final FriendService service;  
+  
+   @Operation(  
+      summary = "[WIP] 친구 추가",  
+      description = "phoneNumbers 를 이용하여 friend 레코드를 추가합니다.",  
+      security = {@SecurityRequirement(name = "bearer-key")}  
+   )  
+   @PostMapping  
+   public ResponseEntity<List<FriendAddResponse>> addFriend(  
+      @AuthenticationPrincipal SecurityUser securityUser,  
+      FriendAddRequest request  
+   ) {  
+      List<FriendAddResponse> responses = service.addFriend(securityUser.getProfileId(), request);  
+      return created(responses);  
+   }  
+
+   // ...
+}
+```
+
 ### `domain.service`
 
+#### 인터페이스
+
+```
+/* 로그인 */
+```
+
+- 위와 같은 javadoc 스타일의 주석을 메서드에 추가한다.
+- 쓸 말이 없어도 controller 의 @Operation 애너테이션의 summary 정도는 복붙으로 옮겨준다.
+
+말이 길어질 것 같으면 
+```
+/**
+* 로그인
+* 로그인을 처리하여 AccessToken 을 응답한다.
+*/
+```
+
+요런 st 로 주석을 추가한다.
+
+```java
+public interface LoginService {
+
+   /**
+	* 로그인
+	* 로그인을 처리하여 AccessToken 을 응답한다.
+	*/
+   LoginResponse login(LoginRequest request);  
+
+   /* 이메일 찾기 */
+   EmailFindResponse findEmailByPhoneNumber(String phoneNumber);  
+
+   /* 비밀번호 초기화 */
+   PasswordFindResponse resetPassword(PasswordFindRequest request);  
+}
+```
+
+#### 구현체
+
+- `@Transactional(readOnly = true)`  를 클래스에 추가하고 Create/Update/Delete 를 수행하는 경우에 메서드에 `@Transactional` 을 추가한다.
+- 필드로는 도메인의 `Repository`,  도메인의 `Service` , 응용 계층의 `Service` 를 추가할 수 있다.
+- 흐름이 복잡한 경우 숫자를 포함해 코멘트를 단다.
+
+```java
+@Slf4j  
+@RequiredArgsConstructor  
+@Transactional(readOnly = true)  
+@Service  
+public class LoginServiceImpl implements LoginService {  
+  
+   private final UserRepository userRepository;  
+   private final ProfileRepository profileRepository;  
+   private final GetProfileIdService getProfileIdService;  
+   private final JwtTokenService tokenService;  
+   private final PasswordEncoder passwordEncoder;  
+  
+   @Override  
+   public LoginResponse login(LoginRequest request) {  
+      // 1. check user exists  
+      User findUser = userRepository.findByEmail(request.getEmail())  
+         .orElseThrow(() -> new BadRequestException("login-failed.email.notfound", request.getEmail()));  
+  
+      // 2. verify password  
+      if (!passwordEncoder.matches(request.getPassword(), findUser.getPassword().getValue())) {  
+         throw new BadRequestException("login-failed.password.mismatch");  
+      }  
+  
+      // 3. jwt token create  
+      long profileId = getProfileIdService.getProfileIdByUserId(findUser.getId());  
+      String accessToken = tokenService.createAccessToken(findUser, profileId);  
+      return new LoginResponse(findUser.getEmail(), accessToken);  
+   }  
+  
+   @Override  
+   public EmailFindResponse findEmailByPhoneNumber(String phoneNumber) {  
+      Profile findProfile = profileRepository.findByPhoneNumber(phoneNumber)  
+         .orElseThrow(() -> new BadRequestException("email-find.phoneNumber.notfound"));  
+      return new EmailFindResponse(findProfile.getUser().getEmail());  
+   }  
+  
+   @Override  
+   public PasswordFindResponse resetPassword(PasswordFindRequest request) {  
+      //TODO 이메일 인증 하기  
+      //TODO 비밀번호 찾기 설계필요 (임시 비밀번호 발급 & 비밀 번호 재설정)  
+      return new PasswordFindResponse(Password.of("password"));  
+   }  
+}
+```
+
 ### `domain.dto`
+
+- 요청/응답 DTO에 모두 같은 방식으로 애너테이션을 추가한다.
+- 필드에 final 키워드는 활용하지 않는다.
+- `vo` 를 바로 바인딩/응답 하는 경우 `JacksonSerializer`/`JacksonDeserializer` 를 등록한다.
+
+```java
+@AllArgsConstructor  
+@NoArgsConstructor  
+@Data  
+public class LoginRequest {  
+  
+   @NotNull  
+   private Email email;  
+  
+   @NotNull  
+   @Schema(description = "비밀 번호", example = "password")  
+   private String password;  
+}
+```
 
 ### `domain.domain`
 
