@@ -19,6 +19,10 @@
 * [8주차 230321(화)](meeting-notes/8-230321.md)
 * [10주차 230404(화)](meeting-notes/10-230404.md)
 * [11주차 230411(화)](meeting-notes/11-230411.md)
+* [12주차 230418(화)](meeting-notes/12-230418.md)
+* [13주차 230425(화)](meeting-notes/13-230425.md)
+* [14주차 230507(일)](meeting-notes/14-230507.md)
+* [15주차 230509(화)](meeting-notes/15-230509.md)
 * [23/03/20-sample-meeting-note](meeting-notes/23-03-20-sample-meeting-note.md)
 
 ## 북마크 <a href="#bookmarks" id="bookmarks"></a>
