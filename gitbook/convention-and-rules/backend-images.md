@@ -7,4 +7,4 @@
 
 ## 조금 더 디테일
 
-![[detailed.png]]
+![detailed](images/detailed.png)
