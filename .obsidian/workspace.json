@@ -1,0 +1,177 @@
+{
+  "main": {
+    "id": "d188bf4f319281fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3e578887cd61689",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "28943db2b8bb1fdb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "gitbook/convention-and-rules/backend-images.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2c01abb03c0bc814",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b9962c6fb389677",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e2a7652cc1bfb36d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b6694875f31ec14e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1115c056986bff15",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "b36faf521f4092d1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "19fc54b309a9810d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce5c613c29eb4b84",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "77b3f37ed83d9f20",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "gitbook/convention-and-rules/backend-images.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6bec83b1116a3f32",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "gitbook/convention-and-rules/backend-images.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5adc88c242bfcab0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0b816434415371ed",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "gitbook/convention-and-rules/backend-images.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "28943db2b8bb1fdb",
+  "lastOpenFiles": [
+    "gitbook/convention-and-rules/images",
+    "gitbook/convention-and-rules/images/overview.png",
+    "gitbook/convention-and-rules/images/detailed.png",
+    "gitbook/SUMMARY.md",
+    "gitbook/convention-and-rules/backend-images.md",
+    "gitbook/convention-and-rules/backend.md",
+    "gitbook/bookmarks/backend.md",
+    "gitbook/bookmarks/frontend.md",
+    "gitbook/bookmarks/common.md",
+    "gitbook/README.md",
+    "gitbook/v-1.0/profile.md",
+    "gitbook/sample-api-document-with-openapi/pet.md",
+    "gitbook/meeting-notes/23-03-20-sample-meeting-note.md",
+    "gitbook/meeting-notes/15-230509.md",
+    "gitbook/meeting-notes/14-230507.md",
+    "gitbook/meeting-notes/13-230425.md",
+    "gitbook/meeting-notes/12-230418.md"
+  ]
+}
