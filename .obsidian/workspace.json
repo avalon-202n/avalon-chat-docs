@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "gitbook/convention-and-rules/backend-images.md",
+                "file": "gitbook/adr/0001-record-architecture-decisions.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "gitbook/convention-and-rules/backend-images.md",
+                "file": "gitbook/adr/0001-record-architecture-decisions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "gitbook/convention-and-rules/backend-images.md",
+                "file": "gitbook/adr/0001-record-architecture-decisions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "gitbook/convention-and-rules/backend-images.md"
+                "file": "gitbook/adr/0001-record-architecture-decisions.md"
               }
             }
           }
@@ -156,16 +156,21 @@
   },
   "active": "28943db2b8bb1fdb",
   "lastOpenFiles": [
+    "gitbook/convention-and-rules/backend.md",
+    "gitbook/adr/0001-record-architecture-decisions.md",
+    "gitbook/adr/backend/Untitled.md",
+    "gitbook/adr/backend",
+    "gitbook/adr",
+    "gitbook/convention-and-rules/backend-images.md",
+    "gitbook/SUMMARY.md",
+    "README.md",
+    "gitbook/README.md",
     "gitbook/convention-and-rules/images",
     "gitbook/convention-and-rules/images/overview.png",
     "gitbook/convention-and-rules/images/detailed.png",
-    "gitbook/SUMMARY.md",
-    "gitbook/convention-and-rules/backend-images.md",
-    "gitbook/convention-and-rules/backend.md",
     "gitbook/bookmarks/backend.md",
     "gitbook/bookmarks/frontend.md",
     "gitbook/bookmarks/common.md",
-    "gitbook/README.md",
     "gitbook/v-1.0/profile.md",
     "gitbook/sample-api-document-with-openapi/pet.md",
     "gitbook/meeting-notes/23-03-20-sample-meeting-note.md",
