@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "gitbook/adr/0001-record-architecture-decisions.md",
+                "file": "gitbook/SUMMARY.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "gitbook/adr/0001-record-architecture-decisions.md",
+                "file": "gitbook/SUMMARY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "gitbook/adr/0001-record-architecture-decisions.md",
+                "file": "gitbook/SUMMARY.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "gitbook/adr/0001-record-architecture-decisions.md"
+                "file": "gitbook/SUMMARY.md"
               }
             }
           }
@@ -156,14 +156,14 @@
   },
   "active": "28943db2b8bb1fdb",
   "lastOpenFiles": [
-    "gitbook/convention-and-rules/backend.md",
+    "README.md",
     "gitbook/adr/0001-record-architecture-decisions.md",
+    "gitbook/SUMMARY.md",
+    "gitbook/convention-and-rules/backend.md",
     "gitbook/adr/backend/Untitled.md",
     "gitbook/adr/backend",
     "gitbook/adr",
     "gitbook/convention-and-rules/backend-images.md",
-    "gitbook/SUMMARY.md",
-    "README.md",
     "gitbook/README.md",
     "gitbook/convention-and-rules/images",
     "gitbook/convention-and-rules/images/overview.png",

@@ -35,3 +35,7 @@
 
 * [🅱 Backend](convention-and-rules/backend.md)
 * [🅱 Backend-Architecture](convention-and-rules/backend-images.md)
+
+## ADR
+
+- [ADR 1. Record architecture decisions](adr/0001-record-architecture-decisions.md)
