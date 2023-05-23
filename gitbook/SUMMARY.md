@@ -40,4 +40,4 @@
 ## ADR
 
 * [ADR 1. Record architecture decisions](adr/0001-record-architecture-decisions.md)
-* [ADR 2. 개발 환경에서의 임베디드 DB 활용](adr/0001-record-architecture-decisions.md)
+* [ADR 2. 개발 환경에서의 임베디드 DB 활용](adr/0002-use-embedded-db-in-dev-env.md)
