@@ -23,6 +23,7 @@
 * [13주차 230425(화)](meeting-notes/13-230425.md)
 * [14주차 230507(일)](meeting-notes/14-230507.md)
 * [15주차 230509(화)](meeting-notes/15-230509.md)
+* [16주차 230516(화)](meeting-notes/16-230516.md)
 * [23/03/20-sample-meeting-note](meeting-notes/23-03-20-sample-meeting-note.md)
 
 ## 북마크 <a href="#bookmarks" id="bookmarks"></a>
@@ -38,4 +39,4 @@
 
 ## ADR
 
-- [ADR 1. Record architecture decisions](adr/0001-record-architecture-decisions.md)
+* [ADR 1. Record architecture decisions](adr/0001-record-architecture-decisions.md)
