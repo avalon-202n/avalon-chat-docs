@@ -24,6 +24,7 @@
 * [14주차 230507(일)](meeting-notes/14-230507.md)
 * [15주차 230509(화)](meeting-notes/15-230509.md)
 * [16주차 230516(화)](meeting-notes/16-230516.md)
+* [17주차 230523(화)](meeting-notes/17-230523.md)
 * [23/03/20-sample-meeting-note](meeting-notes/23-03-20-sample-meeting-note.md)
 
 ## 북마크 <a href="#bookmarks" id="bookmarks"></a>
