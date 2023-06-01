@@ -2,4 +2,4 @@
 
 안녕하세요!
 
-![main.png](main.png)
+![main.png](page-images/main.png)
