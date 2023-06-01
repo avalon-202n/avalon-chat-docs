@@ -1,5 +1,27 @@
 # Table of contents
 
+## 북마크 <a href="#bookmarks" id="bookmarks"></a>
+
+* [🤣 공통](bookmarks/common.md)
+* [⛲ Frontend](bookmarks/frontend.md)
+* [🅱 Backend](bookmarks/backend.md)
+
+## ADR
+
+* [ADR 1. Record architecture decisions](adr/0001-record-architecture-decisions.md)
+* [ADR 2. 개발 환경에서의 임베디드 DB 활용](adr/0002-use-embedded-db-in-dev-env.md)
+
+## 채널
+
+### 백to프
+
+- [name or nickname](channel/back-to-front/name-or-nickname.md)
+
+## 스토리보드
+
+- [1. 회원가입](storyboard/signup/README.md)
+- [2. 로그인](storyboard/login/README.md)
+
 ## 🗒 회의록 <a href="#meeting-notes" id="meeting-notes"></a>
 
 * [1주차 230201(수)](meeting-notes/1-230201.md)
@@ -17,24 +39,7 @@
 * [16주차 230516(화)](meeting-notes/16-230516.md)
 * [17주차 230523(화)](meeting-notes/17-230523.md)
 
-## 북마크 <a href="#bookmarks" id="bookmarks"></a>
-
-* [🤣 공통](bookmarks/common.md)
-* [⛲ Frontend](bookmarks/frontend.md)
-* [🅱 Backend](bookmarks/backend.md)
-
 ## Convention & Rules
 
 * [🅱 Backend](convention-and-rules/backend.md)
 * [🅱 Backend-Architecture](convention-and-rules/backend-images.md)
-
-## ADR
-
-* [ADR 1. Record architecture decisions](adr/0001-record-architecture-decisions.md)
-* [ADR 2. 개발 환경에서의 임베디드 DB 활용](adr/0002-use-embedded-db-in-dev-env.md)
-
-
-## 스토리보드
-
-- [1. 회원가입](storyboard/signup/README.md)
-- [2. 로그인](storyboard/login/README.md)
