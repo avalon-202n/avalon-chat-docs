@@ -43,11 +43,11 @@ resp : includes userId ^Qk7cWuQl
 
 메인 페이지 ^fBOBQskc
 
-Application Crushes @ this stage! ^aUrjDZHJ
+4. Application Crushes @ this stage! ^aUrjDZHJ
 
 첫번째 회원가입 시도 ^Kb67p6hV
 
-두번째 회원가입 시도 ^SSOgymH4
+회원가입 재시도 ^SSOgymH4
 
 req
 
@@ -58,13 +58,34 @@ resp : include userId ^pNgPTvfb
 
 정상 프로필 등록 과정 수행 ^7pPzZJ8J
 
-3. Email (로그인 아이디),
-비밀번호 제출 ^GgEuM79w
+7. Email (로그인 아이디),
+비밀번호 제출
+ ^GgEuM79w
 
-해당 Email 에 따른 유저가 존재하는지 검증하는 절차 수행
-이때 유저는 정상적으로 회원가입을 완료한 상태를 의미함
+해당 Email 의 정상적으로 회원가입을 완료한 유저가 존재하는지 판단함 ^jHXPNbcz
 
-구분하기 위한 UserStatus - 추가되면 좋을듯 ^jHXPNbcz
+5. 로그인 버튼 클릭 (재시도)
+6. 회원가입 버튼 클릭(재시도) ^fnVewVYS
+
+case a. 기존 제출 비밀번호와 같은 경우 ^dd4oPNU3
+
+case b. 기존 제출 비밀번호와 다른 경우 ^29Tj9zIY
+
+7.a ^pnQJjnM7
+
+7.a. case 1 존재한다 -> 이미 가입 했으므로 빠꾸
+
+7.a. case 2 존재하지 않는다 
+
+-> 기존에 제출한 비밀번호와의 비교  ^ktskvsxf
+
+???? ^UYy5eu7v
+
+???? ^uQIPA8Pz
+
+제안 :
+그냥 둘다 정상 프로필 과정으로 보낸다.
+비밀번호는 재시도 과정에서 제출한 것으로 처리 ^NH0kio8m
 
 
 # Embedded files
@@ -118,8 +139,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "arrow",
-			"version": 227,
-			"versionNonce": 742161315,
+			"version": 258,
+			"versionNonce": 2134626317,
 			"isDeleted": false,
 			"id": "voFDa65KQ3R3yMmhxTpNF",
 			"fillStyle": "hachure",
@@ -128,19 +149,19 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -185.98622199633596,
-			"y": 232.79244476637095,
+			"x": -200.0423703001839,
+			"y": 247.93535422507634,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 0.6663915933022224,
-			"height": 82.28454914612527,
+			"width": 13.389756710545726,
+			"height": 97.42745860483066,
 			"seed": 1972052941,
 			"groupIds": [],
 			"roundness": {
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1685619928755,
+			"updated": 1685677489030,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -158,15 +179,15 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 					0
 				],
 				[
-					-0.6663915933022224,
-					-82.28454914612527
+					13.389756710545726,
+					-97.42745860483066
 				]
 			]
 		},
 		{
 			"type": "text",
-			"version": 108,
-			"versionNonce": 546620429,
+			"version": 142,
+			"versionNonce": 256028579,
 			"isDeleted": false,
 			"id": "hfSrYaPV",
 			"fillStyle": "hachure",
@@ -175,12 +196,12 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -279.33694297388985,
-			"y": 236.423673529374,
+			"x": -373.0511938109435,
+			"y": 251.5665829880794,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 180,
-			"height": 25,
+			"width": 326,
+			"height": 45,
 			"seed": 771955341,
 			"groupIds": [],
 			"roundness": null,
@@ -190,10 +211,10 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 					"type": "arrow"
 				}
 			],
-			"updated": 1685619928756,
+			"updated": 1685677489030,
 			"link": null,
 			"locked": false,
-			"fontSize": 20,
+			"fontSize": 36,
 			"fontFamily": 1,
 			"text": "1. 로그인 버튼 클릭",
 			"rawText": "1. 로그인 버튼 클릭",
@@ -202,7 +223,7 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"containerId": null,
 			"originalText": "1. 로그인 버튼 클릭",
 			"lineHeight": 1.25,
-			"baseline": 18
+			"baseline": 31
 		},
 		{
 			"type": "image",
@@ -251,8 +272,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "text",
-			"version": 211,
-			"versionNonce": 1188739693,
+			"version": 214,
+			"versionNonce": 1386305891,
 			"isDeleted": false,
 			"id": "CORUrJqY",
 			"fillStyle": "hachure",
@@ -262,11 +283,11 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"opacity": 100,
 			"angle": 0,
 			"x": 18.98366292317698,
-			"y": 234.27628727963105,
+			"y": 224.27628727963105,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 109,
-			"height": 25,
+			"width": 198,
+			"height": 45,
 			"seed": 1017180205,
 			"groupIds": [],
 			"roundness": null,
@@ -276,10 +297,10 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 					"type": "arrow"
 				}
 			],
-			"updated": 1685619928756,
+			"updated": 1685677494198,
 			"link": null,
 			"locked": false,
-			"fontSize": 20,
+			"fontSize": 36,
 			"fontFamily": 1,
 			"text": "2. 회원가입",
 			"rawText": "2. 회원가입",
@@ -288,7 +309,7 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"containerId": null,
 			"originalText": "2. 회원가입",
 			"lineHeight": 1.25,
-			"baseline": 18
+			"baseline": 31
 		},
 		{
 			"type": "arrow",
@@ -441,8 +462,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "text",
-			"version": 125,
-			"versionNonce": 890684205,
+			"version": 130,
+			"versionNonce": 769442957,
 			"isDeleted": false,
 			"id": "J0Rpi7LJ",
 			"fillStyle": "hachure",
@@ -451,12 +472,12 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 281.5042192124548,
-			"y": 217.1002936884828,
+			"x": 283.7898986209369,
+			"y": 194.81461428000068,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 237,
-			"height": 50,
+			"width": 429,
+			"height": 90,
 			"seed": 676801379,
 			"groupIds": [],
 			"roundness": null,
@@ -470,10 +491,10 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 					"type": "arrow"
 				}
 			],
-			"updated": 1685619928756,
+			"updated": 1685677496997,
 			"link": null,
 			"locked": false,
-			"fontSize": 20,
+			"fontSize": 36,
 			"fontFamily": 1,
 			"text": "3. Email (로그인 아이디),\n비밀번호 제출",
 			"rawText": "3. Email (로그인 아이디),\n비밀번호 제출",
@@ -482,7 +503,7 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"containerId": null,
 			"originalText": "3. Email (로그인 아이디),\n비밀번호 제출",
 			"lineHeight": 1.25,
-			"baseline": 43
+			"baseline": 76
 		},
 		{
 			"type": "line",
@@ -1174,8 +1195,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "arrow",
-			"version": 48,
-			"versionNonce": 703530541,
+			"version": 50,
+			"versionNonce": 1903249773,
 			"isDeleted": false,
 			"id": "q0swciZH8KGlWFSDX3K1Z",
 			"fillStyle": "hachure",
@@ -1184,19 +1205,19 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 341.06534480396607,
-			"y": 281.76803219087566,
+			"x": 343.1546210963539,
+			"y": 279.48235278239355,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 6.176955334779905,
-			"height": 292.787692293853,
+			"width": 4.087679042392097,
+			"height": 295.0733717023351,
 			"seed": 891529229,
 			"groupIds": [],
 			"roundness": {
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1685619928757,
+			"updated": 1685677494986,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1214,8 +1235,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 					0
 				],
 				[
-					6.176955334779905,
-					292.787692293853
+					4.087679042392097,
+					295.0733717023351
 				]
 			]
 		},
@@ -1257,8 +1278,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "arrow",
-			"version": 39,
-			"versionNonce": 1273477261,
+			"version": 43,
+			"versionNonce": 1220514765,
 			"isDeleted": false,
 			"id": "wplFDTt_upMNC4G1RDYu8",
 			"fillStyle": "hachure",
@@ -1267,19 +1288,19 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 441.1320023768288,
-			"y": 559.7310693824004,
+			"x": 441.1305254871377,
+			"y": 559.8188165127119,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 2.4708386856269726,
-			"height": 277.96303719152473,
+			"width": 4.536218269355118,
+			"height": 280.33646373031837,
 			"seed": 1096282541,
 			"groupIds": [],
 			"roundness": {
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1685619928757,
+			"updated": 1685677494987,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1301,8 +1322,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 					0
 				],
 				[
-					2.4708386856269726,
-					-277.96303719152473
+					4.536218269355118,
+					-280.33646373031837
 				]
 			]
 		},
@@ -1574,8 +1595,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "text",
-			"version": 94,
-			"versionNonce": 2131003917,
+			"version": 97,
+			"versionNonce": 1731815203,
 			"isDeleted": false,
 			"id": "aUrjDZHJ",
 			"fillStyle": "hachure",
@@ -1588,23 +1609,23 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"y": 472.82108541457313,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
-			"width": 716,
+			"width": 778,
 			"height": 54.090909090909136,
 			"seed": 640254755,
 			"groupIds": [],
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1685619928758,
+			"updated": 1685677522068,
 			"link": null,
 			"locked": false,
 			"fontSize": 43.27272727272731,
 			"fontFamily": 1,
-			"text": "Application Crushes @ this stage!",
-			"rawText": "Application Crushes @ this stage!",
+			"text": "4. Application Crushes @ this stage!",
+			"rawText": "4. Application Crushes @ this stage!",
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"containerId": null,
-			"originalText": "Application Crushes @ this stage!",
+			"originalText": "4. Application Crushes @ this stage!",
 			"lineHeight": 1.25,
 			"baseline": 38
 		},
@@ -1646,8 +1667,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "text",
-			"version": 241,
-			"versionNonce": 258064493,
+			"version": 323,
+			"versionNonce": 2059096963,
 			"isDeleted": false,
 			"id": "SSOgymH4",
 			"fillStyle": "hachure",
@@ -1656,34 +1677,34 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -490.15836785868646,
-			"y": 1004.9689404899664,
+			"x": -472.55839227274896,
+			"y": 1040.1689526969976,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 769,
+			"width": 577,
 			"height": 96.16667324548992,
 			"seed": 326092003,
 			"groupIds": [],
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1685619928758,
+			"updated": 1685677597072,
 			"link": null,
 			"locked": false,
 			"fontSize": 76.93333859639193,
 			"fontFamily": 1,
-			"text": "두번째 회원가입 시도",
-			"rawText": "두번째 회원가입 시도",
+			"text": "회원가입 재시도",
+			"rawText": "회원가입 재시도",
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"containerId": null,
-			"originalText": "두번째 회원가입 시도",
+			"originalText": "회원가입 재시도",
 			"lineHeight": 1.25,
 			"baseline": 67
 		},
 		{
 			"type": "text",
-			"version": 198,
-			"versionNonce": 1625983203,
+			"version": 285,
+			"versionNonce": 1918647459,
 			"isDeleted": false,
 			"id": "GgEuM79w",
 			"fillStyle": "hachure",
@@ -1692,29 +1713,29 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 269.1165832902424,
-			"y": 1513.668070290716,
+			"x": 221.11658329024237,
+			"y": 1504.0680947047783,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 237,
-			"height": 50,
+			"width": 364,
+			"height": 115.79992675781261,
 			"seed": 1893239053,
 			"groupIds": [],
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1685619928758,
+			"updated": 1685677703348,
 			"link": null,
 			"locked": false,
-			"fontSize": 20,
+			"fontSize": 30.87998046875003,
 			"fontFamily": 1,
-			"text": "3. Email (로그인 아이디),\n비밀번호 제출",
-			"rawText": "3. Email (로그인 아이디),\n비밀번호 제출",
+			"text": "7. Email (로그인 아이디),\n비밀번호 제출\n",
+			"rawText": "7. Email (로그인 아이디),\n비밀번호 제출\n",
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"containerId": null,
-			"originalText": "3. Email (로그인 아이디),\n비밀번호 제출",
+			"originalText": "7. Email (로그인 아이디),\n비밀번호 제출\n",
 			"lineHeight": 1.25,
-			"baseline": 43
+			"baseline": 104
 		},
 		{
 			"type": "rectangle",
@@ -1759,8 +1780,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "rectangle",
-			"version": 240,
-			"versionNonce": 420312195,
+			"version": 241,
+			"versionNonce": 322084355,
 			"isDeleted": false,
 			"id": "pyZkiLn1yL57tmgOkH7uI",
 			"fillStyle": "hachure",
@@ -1784,9 +1805,13 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 				{
 					"id": "ew9-ajwbe4jg3j5HDFfAs",
 					"type": "arrow"
+				},
+				{
+					"id": "6x7UeEZhVNNrlZZRLan0B",
+					"type": "arrow"
 				}
 			],
-			"updated": 1685619928758,
+			"updated": 1685677814509,
 			"link": null,
 			"locked": false
 		},
@@ -1941,8 +1966,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "text",
-			"version": 270,
-			"versionNonce": 1827041219,
+			"version": 302,
+			"versionNonce": 496440867,
 			"isDeleted": false,
 			"id": "xlVKsAxY",
 			"fillStyle": "hachure",
@@ -1951,8 +1976,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -66.37666565945398,
-			"y": 809.4288651114432,
+			"x": -55.17671448757898,
+			"y": 827.0288406973807,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
 			"width": 352,
@@ -1961,7 +1986,7 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"groupIds": [],
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1685619928758,
+			"updated": 1685677568345,
 			"link": null,
 			"locked": false,
 			"fontSize": 31.11979004344329,
@@ -2013,8 +2038,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "text",
-			"version": 114,
-			"versionNonce": 1319731043,
+			"version": 152,
+			"versionNonce": 1852303213,
 			"isDeleted": false,
 			"id": "7pPzZJ8J",
 			"fillStyle": "hachure",
@@ -2023,8 +2048,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 686.7933657186068,
-			"y": 1230.969002645069,
+			"x": 737.0790102498563,
+			"y": 1516.6832883593543,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
 			"width": 468,
@@ -2032,8 +2057,13 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"seed": 339882253,
 			"groupIds": [],
 			"roundness": null,
-			"boundElements": [],
-			"updated": 1685619928758,
+			"boundElements": [
+				{
+					"id": "mNK78qw1tc02fYcME2yJn",
+					"type": "arrow"
+				}
+			],
+			"updated": 1685678045471,
 			"link": null,
 			"locked": false,
 			"fontSize": 36.01252481048332,
@@ -2129,8 +2159,8 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		},
 		{
 			"type": "text",
-			"version": 277,
-			"versionNonce": 1553166093,
+			"version": 409,
+			"versionNonce": 1456923235,
 			"isDeleted": false,
 			"id": "jHXPNbcz",
 			"fillStyle": "hachure",
@@ -2139,35 +2169,890 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 862.4859126653862,
-			"y": 816.2008000897285,
+			"x": 496.0860103216362,
+			"y": 849.0007878826973,
 			"strokeColor": "#f08c00",
 			"backgroundColor": "transparent",
-			"width": 548,
-			"height": 100,
+			"width": 937,
+			"height": 35,
 			"seed": 1277594445,
 			"groupIds": [],
 			"roundness": null,
-			"boundElements": [],
-			"updated": 1685620020368,
+			"boundElements": [
+				{
+					"id": "6x7UeEZhVNNrlZZRLan0B",
+					"type": "arrow"
+				}
+			],
+			"updated": 1685677814509,
 			"link": null,
 			"locked": false,
-			"fontSize": 20,
+			"fontSize": 28,
 			"fontFamily": 1,
-			"text": "해당 Email 에 따른 유저가 존재하는지 검증하는 절차 수행\n이때 유저는 정상적으로 회원가입을 완료한 상태를 의미함\n\n구분하기 위한 UserStatus - 추가되면 좋을듯",
-			"rawText": "해당 Email 에 따른 유저가 존재하는지 검증하는 절차 수행\n이때 유저는 정상적으로 회원가입을 완료한 상태를 의미함\n\n구분하기 위한 UserStatus - 추가되면 좋을듯",
+			"text": "해당 Email 의 정상적으로 회원가입을 완료한 유저가 존재하는지 판단함",
+			"rawText": "해당 Email 의 정상적으로 회원가입을 완료한 유저가 존재하는지 판단함",
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"containerId": null,
-			"originalText": "해당 Email 에 따른 유저가 존재하는지 검증하는 절차 수행\n이때 유저는 정상적으로 회원가입을 완료한 상태를 의미함\n\n구분하기 위한 UserStatus - 추가되면 좋을듯",
+			"originalText": "해당 Email 의 정상적으로 회원가입을 완료한 유저가 존재하는지 판단함",
 			"lineHeight": 1.25,
-			"baseline": 93
+			"baseline": 24
+		},
+		{
+			"type": "text",
+			"version": 261,
+			"versionNonce": 1705439117,
+			"isDeleted": false,
+			"id": "fnVewVYS",
+			"fillStyle": "hachure",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -442.12031633080704,
+			"y": 1174.6098519890654,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 510,
+			"height": 90,
+			"seed": 489849731,
+			"groupIds": [],
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1685677645306,
+			"link": null,
+			"locked": false,
+			"fontSize": 36,
+			"fontFamily": 1,
+			"text": "5. 로그인 버튼 클릭 (재시도)\n6. 회원가입 버튼 클릭(재시도)",
+			"rawText": "5. 로그인 버튼 클릭 (재시도)\n6. 회원가입 버튼 클릭(재시도)",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "5. 로그인 버튼 클릭 (재시도)\n6. 회원가입 버튼 클릭(재시도)",
+			"lineHeight": 1.25,
+			"baseline": 76
+		},
+		{
+			"type": "arrow",
+			"version": 39,
+			"versionNonce": 831507181,
+			"isDeleted": false,
+			"id": "CbkNznVU8vsThc5GbmueC",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 266.19399728526446,
+			"y": 1588.7288443858288,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 0.0001220703125,
+			"height": 195.199951171875,
+			"seed": 1100132419,
+			"groupIds": [],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685677966597,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-0.0001220703125,
+					195.199951171875
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 96,
+			"versionNonce": 1602281613,
+			"isDeleted": false,
+			"id": "Nwp-Fq92P46RV_g1eUtyo",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 259.79385080088946,
+			"y": 1782.3288199717663,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 471.0001220703125,
+			"height": 5.038178010318234,
+			"seed": 1401440835,
+			"groupIds": [],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685677734174,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "dd4oPNU3",
+				"focus": -1.487628734318964,
+				"gap": 11.061919645931766
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					471.0001220703125,
+					-5.038178010318234
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 17,
+			"versionNonce": 2041450723,
+			"isDeleted": false,
+			"id": "q92T8liLhrvzd0tqMNIYE",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 261.39382638682696,
+			"y": 1785.5287711436413,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 1.5999755859375,
+			"height": 134.4000244140625,
+			"seed": 1080714211,
+			"groupIds": [],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685677710109,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-1.5999755859375,
+					134.4000244140625
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 87,
+			"versionNonce": 2126867149,
+			"isDeleted": false,
+			"id": "4XGKsz4vOWS1mi6FTOepF",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 262.99380197276446,
+			"y": 1916.7288443858288,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 676.0446268758577,
+			"height": 7.797100035854783,
+			"seed": 1285694157,
+			"groupIds": [],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685677750244,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "29Tj9zIY",
+				"focus": -1.4744639823261545,
+				"gap": 9.7000732421875
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					676.0446268758577,
+					-7.797100035854783
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 140,
+			"versionNonce": 2112158403,
+			"isDeleted": false,
+			"id": "dd4oPNU3",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 297.99392404307696,
+			"y": 1731.2287223155163,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 538,
+			"height": 35,
+			"seed": 1809612771,
+			"groupIds": [],
+			"roundness": null,
+			"boundElements": [
+				{
+					"id": "Nwp-Fq92P46RV_g1eUtyo",
+					"type": "arrow"
+				}
+			],
+			"updated": 1685677734174,
+			"link": null,
+			"locked": false,
+			"fontSize": 28,
+			"fontFamily": 1,
+			"text": "case a. 기존 제출 비밀번호와 같은 경우",
+			"rawText": "case a. 기존 제출 비밀번호와 같은 경우",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "case a. 기존 제출 비밀번호와 같은 경우",
+			"lineHeight": 1.25,
+			"baseline": 24
+		},
+		{
+			"type": "text",
+			"version": 208,
+			"versionNonce": 478824675,
+			"isDeleted": false,
+			"id": "29Tj9zIY",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 279.59377755870196,
+			"y": 1865.6286246592663,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 533,
+			"height": 35,
+			"seed": 1973332579,
+			"groupIds": [],
+			"roundness": null,
+			"boundElements": [
+				{
+					"id": "4XGKsz4vOWS1mi6FTOepF",
+					"type": "arrow"
+				}
+			],
+			"updated": 1685677750241,
+			"link": null,
+			"locked": false,
+			"fontSize": 28,
+			"fontFamily": 1,
+			"text": "case b. 기존 제출 비밀번호와 다른 경우",
+			"rawText": "case b. 기존 제출 비밀번호와 다른 경우",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "case b. 기존 제출 비밀번호와 다른 경우",
+			"lineHeight": 1.25,
+			"baseline": 24
+		},
+		{
+			"type": "text",
+			"version": 58,
+			"versionNonce": 1703957059,
+			"isDeleted": false,
+			"id": "pnQJjnM7",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 837.393582246202,
+			"y": 758.7288138682507,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 88,
+			"height": 75.00000000000001,
+			"seed": 1271949987,
+			"groupIds": [],
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1685677804164,
+			"link": null,
+			"locked": false,
+			"fontSize": 60.00000000000001,
+			"fontFamily": 1,
+			"text": "7.a",
+			"rawText": "7.a",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "7.a",
+			"lineHeight": 1.25,
+			"baseline": 52
+		},
+		{
+			"type": "arrow",
+			"version": 41,
+			"versionNonce": 1346971981,
+			"isDeleted": false,
+			"id": "6x7UeEZhVNNrlZZRLan0B",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1011.793728730577,
+			"y": 889.5288016612194,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 1.60009765625,
+			"height": 196.80001831054688,
+			"seed": 217256419,
+			"groupIds": [],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685677814509,
+			"link": null,
+			"locked": false,
+			"startBinding": {
+				"elementId": "jHXPNbcz",
+				"focus": -0.10033342886631806,
+				"gap": 5.528013778522109
+			},
+			"endBinding": {
+				"elementId": "pyZkiLn1yL57tmgOkH7uI",
+				"focus": 0.24149684067443591,
+				"gap": 28.49892431899582
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					1.60009765625,
+					196.80001831054688
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 219,
+			"versionNonce": 1101169325,
+			"isDeleted": false,
+			"id": "ktskvsxf",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1033.793728730577,
+			"y": 900.7288443858288,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 651,
+			"height": 175,
+			"seed": 1293875725,
+			"groupIds": [],
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1685677973458,
+			"link": null,
+			"locked": false,
+			"fontSize": 28,
+			"fontFamily": 1,
+			"text": "7.a. case 1 존재한다 -> 이미 가입 했으므로 빠꾸\n\n7.a. case 2 존재하지 않는다 \n\n-> 기존에 제출한 비밀번호와의 비교 ",
+			"rawText": "7.a. case 1 존재한다 -> 이미 가입 했으므로 빠꾸\n\n7.a. case 2 존재하지 않는다 \n\n-> 기존에 제출한 비밀번호와의 비교 ",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "7.a. case 1 존재한다 -> 이미 가입 했으므로 빠꾸\n\n7.a. case 2 존재하지 않는다 \n\n-> 기존에 제출한 비밀번호와의 비교 ",
+			"lineHeight": 1.25,
+			"baseline": 164
+		},
+		{
+			"type": "arrow",
+			"version": 179,
+			"versionNonce": 1072020909,
+			"isDeleted": false,
+			"id": "8Y8Z1lrh3qAGKFeNcZS8O",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1498.193631074327,
+			"y": 1065.5287711436413,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 1257.599853515625,
+			"height": 539.2000732421875,
+			"seed": 1889145677,
+			"groupIds": [],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685678054082,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-1257.599853515625,
+					78.40008544921875
+				],
+				[
+					-1230.3997802734375,
+					539.2000732421875
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 67,
+			"versionNonce": 1343520611,
+			"isDeleted": false,
+			"id": "nqP5nl5H2y7tcMSuCkh6J",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 872.593777558702,
+			"y": 1772.7287223155163,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 302.400146484375,
+			"height": 0,
+			"seed": 1138685859,
+			"groupIds": [
+				"YDi3Y6Vj150bZ_s-dJiYB"
+			],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685678020769,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					302.400146484375,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 34,
+			"versionNonce": 1840798787,
+			"isDeleted": false,
+			"id": "UYy5eu7v",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1200.593777558702,
+			"y": 1755.1287467295788,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 52,
+			"height": 35,
+			"seed": 2024036419,
+			"groupIds": [
+				"YDi3Y6Vj150bZ_s-dJiYB"
+			],
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1685678015568,
+			"link": null,
+			"locked": false,
+			"fontSize": 28,
+			"fontFamily": 1,
+			"text": "????",
+			"rawText": "????",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "????",
+			"lineHeight": 1.25,
+			"baseline": 24
+		},
+		{
+			"type": "arrow",
+			"version": 93,
+			"versionNonce": 1107360301,
+			"isDeleted": false,
+			"id": "b96xRpTCfvhE4zECLrQwt",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 973.2679064912171,
+			"y": 1902.3440076391275,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 270.400146484375,
+			"height": 6.4000244140625,
+			"seed": 592600995,
+			"groupIds": [
+				"ec5ETG81aCedttl3Wh3pS"
+			],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685678013340,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					270.400146484375,
+					6.4000244140625
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 82,
+			"versionNonce": 373607203,
+			"isDeleted": false,
+			"id": "uQIPA8Pz",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1301.2679064912172,
+			"y": 1884.74403205319,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 52,
+			"height": 35,
+			"seed": 1439462211,
+			"groupIds": [
+				"ec5ETG81aCedttl3Wh3pS"
+			],
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1685678013340,
+			"link": null,
+			"locked": false,
+			"fontSize": 28,
+			"fontFamily": 1,
+			"text": "????",
+			"rawText": "????",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "????",
+			"lineHeight": 1.25,
+			"baseline": 24
+		},
+		{
+			"type": "line",
+			"version": 15,
+			"versionNonce": 1894034531,
+			"isDeleted": false,
+			"id": "F__XXG1XB13A_zdT-jF6a",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1324.517814713289,
+			"y": 1772.644178537565,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 153.599853515625,
+			"height": 1.60009765625,
+			"seed": 750033667,
+			"groupIds": [],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685678028416,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					153.599853515625,
+					-1.60009765625
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 18,
+			"versionNonce": 672969987,
+			"isDeleted": false,
+			"id": "m1hyFeRymtpLycBl6eiA4",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1478.117668228914,
+			"y": 1771.044080881315,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 4.800048828125,
+			"height": 139.2000732421875,
+			"seed": 2119499597,
+			"groupIds": [],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685678030012,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					4.800048828125,
+					139.2000732421875
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 30,
+			"versionNonce": 1793536867,
+			"isDeleted": false,
+			"id": "GJf42oquypBwyXhyr3l3J",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1377.317619400789,
+			"y": 1908.644178537565,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 112,
+			"height": 6.39990234375,
+			"seed": 2096582829,
+			"groupIds": [],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685678031864,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					112,
+					6.39990234375
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 94,
+			"versionNonce": 1918351885,
+			"isDeleted": false,
+			"id": "mNK78qw1tc02fYcME2yJn",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1484.517814713289,
+			"y": 1846.2441541235025,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 432,
+			"height": 289.60003662109375,
+			"seed": 1352641347,
+			"groupIds": [],
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1685678047290,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "7pPzZJ8J",
+				"focus": -0.633938407376406,
+				"gap": 2.638755635307689
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					155.199951171875,
+					-134.4000244140625
+				],
+				[
+					-276.800048828125,
+					-289.60003662109375
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 217,
+			"versionNonce": 1895625315,
+			"isDeleted": false,
+			"id": "NH0kio8m",
+			"fillStyle": "hachure",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1200.517814713289,
+			"y": 1609.4440442602213,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"width": 630,
+			"height": 105,
+			"seed": 466639565,
+			"groupIds": [],
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1685678101543,
+			"link": null,
+			"locked": false,
+			"fontSize": 28,
+			"fontFamily": 1,
+			"text": "제안 :\n그냥 둘다 정상 프로필 과정으로 보낸다.\n비밀번호는 재시도 과정에서 제출한 것으로 처리",
+			"rawText": "제안 :\n그냥 둘다 정상 프로필 과정으로 보낸다.\n비밀번호는 재시도 과정에서 제출한 것으로 처리",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "제안 :\n그냥 둘다 정상 프로필 과정으로 보낸다.\n비밀번호는 재시도 과정에서 제출한 것으로 처리",
+			"lineHeight": 1.25,
+			"baseline": 95
 		}
 	],
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#f08c00",
+		"currentItemStrokeColor": "#e03131",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "hachure",
 		"currentItemStrokeWidth": 4,
@@ -2175,14 +3060,14 @@ b1d4cec175ff426ac3bd061c9de9135fc42ea174: [[login.png]]
 		"currentItemRoughness": 1,
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 1,
-		"currentItemFontSize": 20,
+		"currentItemFontSize": 28,
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 1233.5945105236717,
-		"scrollY": -1.9541699167312672,
+		"scrollX": 1346.5489984377523,
+		"scrollY": 143.555859100781,
 		"zoom": {
-			"value": 0.35971902206540113
+			"value": 0.30000000000000004
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
