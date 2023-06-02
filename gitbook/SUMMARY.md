@@ -21,6 +21,7 @@
 
 - [1. 회원가입](storyboard/auth/signup/README.md)
 - [2. 로그인](storyboard/auth/login/README.md)
+- [3. 토큰 만료와 재발급](storyboard/auth/token-expire-and-do-refresh/README.md)
 - [3. 친구추가 - 핸드폰 번호](storyboard/friends/add/by-phoenumber.md)
 - - [4. 친구 동기화](storyboard/friends/synchronize/README.md)
 
