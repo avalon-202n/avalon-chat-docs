@@ -21,7 +21,7 @@ Suggest) 친구별 이름을 개별 사용자가
 
 # Embedded files
 c59441323e91c7731abe990888fa774cd0e4d9f4: [[add-friend-by-phonenumber.png]]
-5c9fea7395adbefb569b325591d496beb4945680: [[Pasted Image 20230606154417_519.jpg]]
+5c9fea7395adbefb569b325591d496beb4945680: [[add-friend-by-phonenumber-success-view.jpg]]
 
 %%
 # Drawing
